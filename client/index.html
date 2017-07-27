@@ -42,7 +42,7 @@
         <!-- tempat append timeline -->
         <div class="col-md-4">
           <div class="container timeline col-md-12">
-            
+
           </div>
         </div>
 
@@ -103,6 +103,8 @@
         }
       })
       .then(data => {
+        console.log(data);
+        $('.search-timeline').empty();
         var statuses = data.data.statuses;
         statuses.forEach(status =>{
           $('.search-timeline').append(

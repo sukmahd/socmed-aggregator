@@ -10,11 +10,13 @@ app.use(bodyParser.json({ type: 'application/*+json' }))
 app.use(bodyParser.json({type: 'application/x-www-form-urlencoded'}))
 
 const twatt = require('./routers/twatt')
+const facebook = require('./routers/facebook')
 
 app.get('/', function(req,res){
   res.send('hai, test app twitter')
 })
 
 app.use('/twatt', twatt)
+app.use('/facebook', facebook)
 
 app.listen(3000)
